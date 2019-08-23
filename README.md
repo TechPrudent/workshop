@@ -192,6 +192,8 @@ req:
     "address" : "user address"
 }
 resp:
+
+```json
 {
     "orderId": 1429511261,
     "cart": {
@@ -207,3 +209,4 @@ resp:
     "address": "user address",
     "amount": 40
 }
+```json
