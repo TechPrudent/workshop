@@ -1,4 +1,4 @@
-package com.thoughtworks.domain;
+package com.thoughtworks.domain.rating.login;
 
 public interface LoginStrategy {
 

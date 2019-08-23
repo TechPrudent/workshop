@@ -1,10 +1,14 @@
-package com.thoughtworks.domain;
+package com.thoughtworks.domain.rating;
 
 public class UserRating {
 
 	private int id;
 	private int rating;
 	private String userType;
+
+	public UserRating() {
+		super();
+	}
 
 	public UserRating(int id, int rating, String userType) {
 		super();
@@ -13,32 +17,28 @@ public class UserRating {
 		this.userType = userType;
 	}
 
-	public String getUserType() {
-		return userType;
-	}
-
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
-
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public int getRating() {
 		return rating;
 	}
 
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public void setRating(int rating) {
 		this.rating = rating;
 	}
 
-	public UserRating() {
-		super();
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.thoughtworks.domain;
+package com.thoughtworks.domain.rating.login;
 
 public class User {
 
@@ -21,24 +21,24 @@ public class User {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public String getName() {
+		return name;
 	}
 
 	public String getType() {
 		return type;
 	}
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getName() {
-		return name;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }
