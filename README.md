@@ -31,7 +31,6 @@ req:
 	"type" : "guest"
 }
 resp:
-```json
 {
     "message": "success",
     "code": 200
@@ -39,7 +38,6 @@ resp:
 
 GET : localhost:8080/restaurants
 resp:
-```json
 [
     {
         "id": 1,
@@ -110,7 +108,6 @@ resp:
 ]
 
 GET : localhost:8080/restaurant?id=1
-```json
 {
     "id": 1,
     "name": "res1",
@@ -128,7 +125,6 @@ GET : localhost:8080/restaurant?id=1
 
 POST : localhost:8080/restaurant/rate
 req:
-```json
 {
 	"id" : "1",
 	"rating" : "4",
@@ -136,7 +132,6 @@ req:
 }
 
 resp:
-```json
 {
     "id": 1,
     "name": "res1",
@@ -162,7 +157,6 @@ resp:
 }
 
 POST : localhost:8080/cart/
-```json
 req:
 {
 	 "dishes": [
@@ -173,7 +167,6 @@ req:
     "paymentType" : "pp",
     "restaurantId": 1
 }
-```json
 resp:
 {
     "dishes": [
@@ -187,7 +180,6 @@ resp:
 
 POST : localhost:8080/order
 req:
-```json
 {
 	"cart" : {
 		"dishes": [
@@ -202,7 +194,6 @@ req:
     "address" : "user address"
 }
 resp:
-```json
 {
     "orderId": 1429511261,
     "cart": {
@@ -218,3 +209,4 @@ resp:
     "address": "user address",
     "amount": 40
 }
+```json
