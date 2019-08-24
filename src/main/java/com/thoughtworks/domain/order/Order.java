@@ -14,6 +14,7 @@ public class Order {
 	private String paymentType;
 	private String address;
 	private int amount;
+	private String userId;
 
 	public Order() {
 		super();
@@ -48,6 +49,10 @@ public class Order {
 		return paymentType;
 	}
 
+	public String getUserId() {
+		return userId;
+	}
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
@@ -66,6 +71,10 @@ public class Order {
 
 	public void setPaymentType(String paymentType) {
 		this.paymentType = paymentType;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 }

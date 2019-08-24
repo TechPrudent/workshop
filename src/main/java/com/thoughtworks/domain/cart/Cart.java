@@ -14,6 +14,7 @@ public class Cart {
 	private List<Dish> dishes;
 	private String paymentType;
 	private int restaurantId;
+	private String userId;
 
 	public Cart() {
 		super();
@@ -38,6 +39,10 @@ public class Cart {
 		return restaurantId;
 	}
 
+	public String getUserId() {
+		return userId;
+	}
+
 	public void setDishes(List<Dish> dishes) {
 		this.dishes = dishes;
 	}
@@ -48,6 +53,10 @@ public class Cart {
 
 	public void setRestaurantId(int restaurantId) {
 		this.restaurantId = restaurantId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 }

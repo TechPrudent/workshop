@@ -7,6 +7,9 @@ import com.thoughtworks.domain.cart.Cart;
 @Component
 public class Paypal implements PaymentStrategy {
 
+	/**
+	 * values can vary for different strategies
+	 */
 	int paypalConvenienceFee = 2;
 
 	@Override

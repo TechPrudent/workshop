@@ -33,7 +33,10 @@ public class RestaurantServiceImpl implements RestaurantService {
 	}
 
 	private Rating getRating(UserRating userRating) {
-		return new Rating(userRating.getRating(), userRating.getUserType());
+		if (userRating.getUserId() == null) {
+			userRating.setUserId("anonymous");
+		}
+		return new Rating(userRating.getRating(), userRating.getUserType(), userRating.getUserId());
 	}
 
 	@Override

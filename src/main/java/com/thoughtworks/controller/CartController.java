@@ -3,6 +3,7 @@ package com.thoughtworks.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.thoughtworks.domain.cart.Cart;
@@ -20,8 +21,8 @@ public class CartController {
 	}
 
 	@PostMapping("/cart")
-	public Cart addItemsToCart(@RequestBody Cart cart) {
-
+	public Cart addItemsToCart(@RequestHeader String userId, @RequestBody Cart cart) {
+		cart.setUserId(userId);
 		return this.cartService.addItemsToCart(cart);
 	}
 

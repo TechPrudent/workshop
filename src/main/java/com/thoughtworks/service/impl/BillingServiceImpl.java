@@ -8,6 +8,7 @@ import com.thoughtworks.domain.billing.CashOnDeliveryPayment;
 import com.thoughtworks.domain.billing.NetBanking;
 import com.thoughtworks.domain.billing.Paypal;
 import com.thoughtworks.domain.cart.Cart;
+import com.thoughtworks.domain.rating.login.User;
 import com.thoughtworks.service.BillingService;
 
 @Service
@@ -34,6 +35,13 @@ public class BillingServiceImpl implements BillingService {
 	@Override
 	public BillingResponse getBillingResponse(Cart cart) {
 		int amount = 0;
+
+		String userId = cart.getUserId();
+		User user = UserServiceImpl.users.get(userId);
+		if (user.getPreferredPaymentMethod() != null) {
+			cart.setPaymentType(user.getPreferredPaymentMethod());
+		}
+
 		if (cart.getPaymentType().equals("cod")) {
 			amount = cod.getAmount(cart);
 		} else if (cart.getPaymentType().equals("nb")) {

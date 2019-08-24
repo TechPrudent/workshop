@@ -3,6 +3,7 @@ package com.thoughtworks.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.thoughtworks.domain.order.Order;
@@ -20,7 +21,9 @@ public class OrderController {
 	}
 
 	@PostMapping("/order")
-	public Order createOrder(@RequestBody Order order) {
+	public Order createOrder(@RequestHeader String userId, @RequestBody Order order) {
+
+		order.setUserId(userId);
 		return this.orderService.createOrder(order);
 	}
 

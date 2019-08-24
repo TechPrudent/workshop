@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 public class GuestLogin implements LoginStrategy {
 
 	@Override
-	public boolean login(User user) {
-		return (user.getType().equals("guest"));
+	public User login(User user) {
+		boolean isGuest = user.getType().equals("guest");
+		return user;
 	}
 
 }
